@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.limit(5)
+    @posts = Post.limit(30)
   end
 
   def hobby
@@ -24,5 +24,5 @@ class PostsController < ApplicationController
 
   def get_posts
     Post.limit(30)
-  end  
+  end
 end
