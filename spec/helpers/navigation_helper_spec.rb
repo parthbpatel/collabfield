@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe NavigationHelper, :type => :helper do
+RSpec.describe NavigationHelper, :type => :helper do
 
   context 'signed in user' do
     before(:each) { helper.stub(:user_signed_in?).and_return(true) }
