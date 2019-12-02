@@ -53,7 +53,7 @@ RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include FactoryGirl::Syntax::Methods
   Capybara.javascript_driver = :poltergeist
-  Capybara.server = :pumansactional_fixtures = false
+  config.use_transactional_fixtures = false
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
