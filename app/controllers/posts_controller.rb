@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   before_action :redirect_if_not_signed_in, only: [:new]
 
+  def show
+
+  end
+
   def new
     @branch = params[:branch]
     @categories = Category.where(branch: @branch)
@@ -10,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to root_path
     else
       redirect_to root_path
     end
