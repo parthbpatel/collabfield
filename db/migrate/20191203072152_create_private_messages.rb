@@ -5,7 +5,7 @@ class CreatePrivateMessages < ActiveRecord::Migration[6.0]
       t.references :user, foreign_key: true
       t.belongs_to :conversation, index: true
       t.boolean :seen, default: false
-      
+
       t.timestamps
     end
   end
