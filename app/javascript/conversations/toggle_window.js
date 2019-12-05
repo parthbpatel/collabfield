@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
           // Load first 10 messages if messages list is empty
           if (!messages_visible && $('.load-more-messages', this).length) {
               $('.load-more-messages', this)[0].click();
-          }          
+          }
         });
     });
 });
